@@ -1,0 +1,20 @@
+{
+  "name": "cip-protocol",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "babel src -d dist",
+    "test_simple": "mocha test/**/*.test.js",
+    "test": "mocha",
+    "lint": "eslint src"
+  },
+  "dependencies": {
+    "debug": "^4.3.4"
+  },
+  "devDependencies": {
+    "mocha": "^9.1.3",
+    "chai": "^4.3.4"
+  },
+  "keywords": ["cip", "ethernet/ip", "industrial", "automation"]
+}
