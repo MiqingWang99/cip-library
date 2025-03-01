@@ -5,7 +5,7 @@ async function main() {
   try {
     await client.connect();
 
-    // 示例1：读取设备Vendor ID
+    // Example 1: Read device Vendor ID
     const vendorId = await client.getAttribute(
       CIP_CLASS_IDS.IDENTITY,
       0x01, // Instance 1
@@ -13,15 +13,15 @@ async function main() {
     );
     console.log("Vendor ID:", vendorId.value);
 
-    // 示例2：写入设备参数
+    // Example 2: Write device parameter
     await client.setAttribute(
       CIP_CLASS_IDS.ASSEMBLY,
       0x01, // Instance 1
       0x03, // Attribute 3 (Output Data)
-      1234  // 写入的值
+      1234  // Value to write
     );
 
-    // 示例3：获取完整设备信息
+    // Example 3: Get complete device information
     const identity = await client.getIdentityInfo();
     console.log("Device Info:", identity);
   } catch (error) {
